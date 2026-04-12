@@ -1,0 +1,341 @@
+:root {
+  --bg: #05060a;
+  --panel: rgba(14, 18, 32, 0.92);
+  --cyan: #2de1ff;
+  --violet: #8b5cf6;
+  --text: #e8f0ff;
+  --muted: rgba(232, 240, 255, 0.55);
+  --border: rgba(45, 225, 255, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Outfit, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 100% 80% at 50% -30%, rgba(45, 225, 255, 0.12), transparent 55%),
+    radial-gradient(ellipse 50% 50% at 100% 0%, rgba(139, 92, 246, 0.1), transparent),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+}
+
+.top,
+.hero,
+.panel,
+.foot {
+  position: relative;
+  z-index: 1;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.brand-mark {
+  display: block;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 0.08em;
+  color: var(--cyan);
+  text-shadow: 0 0 20px rgba(45, 225, 255, 0.35);
+}
+
+.brand-sub {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.wallet-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.wallet-short {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-family: ui-monospace, monospace;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 1.25rem 1rem;
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.68rem;
+  color: var(--cyan);
+  margin: 0 0 0.75rem;
+}
+
+.hero h1 {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(2.4rem, 7vw, 3.8rem);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.hero h1 em {
+  color: var(--violet);
+  font-style: normal;
+  text-shadow: 0 0 30px rgba(139, 92, 246, 0.45);
+}
+
+.lede {
+  margin: 0 auto 1.75rem;
+  max-width: 38rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.lede strong {
+  color: var(--text);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  max-width: 44rem;
+  margin: 0 auto 1.5rem;
+}
+
+.stat-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  text-align: left;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.stat-value.state {
+  color: var(--cyan);
+}
+
+.countdown-wrap {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+}
+
+.countdown-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.countdown {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.countdown code {
+  font-size: 0.8em;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+.panel {
+  max-width: 960px;
+  margin: 1.25rem auto;
+  padding: 1.5rem 1.25rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.panel h2 {
+  margin: 0 0 0.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+
+.funnel-steps {
+  text-align: left;
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.funnel-steps strong {
+  color: var(--text);
+}
+
+.funnel-note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: left;
+}
+
+.preview-head {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.muted {
+  color: var(--muted);
+  margin: 0.25rem 0 0;
+}
+
+.small {
+  font-size: 0.82rem;
+  margin-top: 1rem;
+}
+
+.preview-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+#preview-canvas {
+  max-width: min(100%, 400px);
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 40px rgba(45, 225, 255, 0.08);
+}
+
+.traits {
+  text-align: left;
+  min-width: 220px;
+  padding: 1rem 1.2rem;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.traits dl {
+  margin: 0;
+}
+
+.traits dt {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-top: 0.65rem;
+}
+
+.traits dt:first-child {
+  margin-top: 0;
+}
+
+.traits dd {
+  margin: 0.15rem 0 0;
+  font-weight: 600;
+}
+
+.mint-block {
+  text-align: center;
+}
+
+.status {
+  min-height: 1.4rem;
+  margin: 0 0 1rem;
+}
+
+.mint-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--cyan), #0077ff);
+  color: #05060a;
+  box-shadow: 0 10px 28px rgba(45, 225, 255, 0.25);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+}
+
+.btn-ghost {
+  background: rgba(139, 92, 246, 0.15);
+  color: #ddd6fe;
+  border: 1px solid rgba(139, 92, 246, 0.45);
+}
+
+.foot {
+  text-align: center;
+  padding: 2rem 1rem 2.5rem;
+  font-size: 0.78rem;
+  color: rgba(232, 240, 255, 0.35);
+}
