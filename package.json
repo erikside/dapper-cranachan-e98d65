@@ -1,0 +1,13 @@
+{
+  "name": "ice-league",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node generator/generator.mjs",
+    "upload-ipfs": "node scripts/upload-ipfs.mjs"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.65",
+    "nft.storage": "^7.1.1"
+  }
+}

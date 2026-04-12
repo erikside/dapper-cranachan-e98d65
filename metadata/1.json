@@ -1,0 +1,23 @@
+{
+  "name": "Ice League #1",
+  "description": "Digital Jersey Universe — maillot génératif inspiré hockey, équipes fictives, sans logos officiels.",
+  "image": "ipfs://CID_A_REMPLACER/1.png",
+  "attributes": [
+    {
+      "trait_type": "Team",
+      "value": "Purple Storm"
+    },
+    {
+      "trait_type": "Jersey Type",
+      "value": "Away"
+    },
+    {
+      "trait_type": "Pattern",
+      "value": "Stripe"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    }
+  ]
+}

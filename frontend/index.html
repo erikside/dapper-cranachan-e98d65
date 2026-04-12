@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICE LEAGUE — Digital Jersey Universe</title>
+  <meta name="description" content="1000 maillots génératifs home/away, rareté Common → Legendary. Ligue fictive, designs originaux.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="brand">
+      <span class="brand-mark">ICE LEAGUE</span>
+      <span class="brand-sub">Digital Jersey Universe</span>
+    </div>
+    <div class="wallet-row">
+      <span id="wallet-short" class="wallet-short" hidden></span>
+      <button type="button" id="connect" class="btn btn-outline">Connect Wallet</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <p class="kicker">1000 NFTs · maillots génératifs · reveal & whitelist</p>
+    <h1>La ligue qui n’existe <em>nulle part</em><br>mais vit on-chain</h1>
+    <p class="lede">Home / away, patterns pondérés (Clean → Glitch rare), rareté jusqu’à <strong>Legendary ~1%</strong>. Aucun logo officiel — 100 % original.</p>
+
+    <div class="stats" role="group" aria-label="Statistiques de mint">
+      <div class="stat-card">
+        <span class="stat-label">Mintés</span>
+        <strong id="supply" class="stat-value">— / 1000</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Tes mints</span>
+        <strong id="my-mints" class="stat-value">—</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Prix (unitaire)</span>
+        <strong id="mint-price" class="stat-value">—</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Statut</span>
+        <strong id="mint-state" class="stat-value state">—</strong>
+      </div>
+    </div>
+
+    <div class="countdown-wrap">
+      <p class="countdown-label">Drop</p>
+      <p id="countdown" class="countdown">Configure <code>DROP_TIMESTAMP_MS</code> dans <code>config.js</code> ou suis nos annonces.</p>
+    </div>
+  </section>
+
+  <section class="funnel panel">
+    <h2>Funnel de lancement</h2>
+    <ol class="funnel-steps">
+      <li><strong>Phase hype</strong> — teasers, aperçu du drop, fuites de jerseys rares (Neon / Glitch).</li>
+      <li><strong>Phase WL</strong> — giveaways, liste blanche, mint anticipé (même prix, hors pause publique).</li>
+      <li><strong>Phase mint</strong> — ouverture publique, supply live, urgence “only 1000”.</li>
+    </ol>
+    <p class="funnel-note">Saison 2, airdrops et évolutions de ligue : à annoncer après sell-out.</p>
+  </section>
+
+  <section class="panel preview-block">
+    <div class="preview-head">
+      <h2>Drop preview</h2>
+      <p class="muted">Même moteur que le batch generator (graine aléatoire).</p>
+    </div>
+    <div class="preview-layout">
+      <canvas id="preview-canvas" width="500" height="500" aria-label="Aperçu maillot"></canvas>
+      <div id="traits" class="traits"></div>
+    </div>
+    <button type="button" id="regen" class="btn btn-primary">Nouveau tirage</button>
+  </section>
+
+  <section class="panel mint-block">
+    <h2>Mint</h2>
+    <p id="status" class="status" role="status"></p>
+    <div class="mint-btns">
+      <button type="button" id="mint-public" class="btn btn-primary">Mint public (×1)</button>
+      <button type="button" id="mint-wl" class="btn btn-ghost">Mint whitelist (×1)</button>
+    </div>
+    <p class="muted small">Après déploiement : mets l’adresse dans <code>config.js</code>. Le contrat peut démarrer en <strong>pause</strong> : utilise la WL si le owner t’a ajouté.</p>
+  </section>
+
+  <footer class="foot">
+    <p>© 2026 ICE LEAGUE — Digital Jersey Universe · inspiration hockey, collection fictive et vendable.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.2/dist/ethers.umd.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
