@@ -1,5 +1,5 @@
 /** Adresse du contrat après déploiement */
-export const CONTRACT_ADDRESS = "0xTON_CONTRACT_ICI";
+export const CONTRACT_ADDRESS = "0xd9145CCE52D386f254917e481eB44e9943F39138";
 
 /** Timestamp UTC du mint (ms). null = pas de compte à rebours automatique */
 export const DROP_TIMESTAMP_MS = null;
