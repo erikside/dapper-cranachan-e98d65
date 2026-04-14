@@ -22,6 +22,10 @@ contract IceLeague is ERC721A, Ownable {
 
     constructor() ERC721A("IceLeague", "ICE") Ownable(msg.sender) {}
 
+    function _startTokenId() internal pure override returns (uint256) {
+        return 1;
+    }
+
     function mint(uint256 quantity) external payable {
         require(!paused, "Paused");
         require(quantity > 0, "Zero qty");
